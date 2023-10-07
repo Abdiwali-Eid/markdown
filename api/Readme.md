@@ -1,33 +1,113 @@
-# Heading
+# Bookstore API Documention
 ---
-## sub heading
+this is the documentation for the api end points provided by the server
+# Base URL 
+<!-- urlka soo gali -->
+## Introduction
 
-1. item 1
-2. item 2
-3. item 4
+<!-- Introduction to the Bookstore API
+The Bookstore API is a RESTful API that allows you to manage your bookstore. It provides the following endpoints:
 
-*italic text* 
+1. Bookstores: This endpoint allows you to create, read, update, and delete bookstores.
+2. Authors: This endpoint allows you to create, read, update, and delete authors.
+3. Books: This endpoint allows you to create, read, update, and delete books.
+4. Owner registration: This endpoint allows bookstore owners to register for an account.
+5. User authentication with JWT: This endpoint allows users to authenticate and obtain a JWT token, which can be used to authenticate subsequent requests to the API. -->
 
-**bold text**
-# Response
+# Authentication
+___ 
 
-|**Parameter**   |**Type**   | Required  |Description   |   
-|---|---|---|---|
-|  name | String  | Yes  |  The name of the owner. |  
-| email  | String  | Yes  |  The email of the owner. |   
-| password |string   |Yes   |	The password of the owner.   |   
+All requests to this API must be authenticated with a JWT token. You can obtain a JWT token by authenticating to the /login endpoint. The request body must contain the following fields:
+<ul>
+<li>
+email
+</li>
+<li>
+password
+</li>
+</ul>
+
+# Endpoints
+---
+The Bookstore API is a  API that allows you to manage your bookstore. It provides the following endpoints:
+## Owner registration
+
+<ul>
+<li>
+Url:api/owners/signup
+</li>
+<li>
+method:Post
+</li>
+<li>
+Description:registers a new user
+</li>
+<li>
+Request Body:
+</li>
+</ul>
 
 
+
+
+|**Field**   |**Type**   | Description   |   
+|---|---|---|
+|  name | String  |  The name of the owner. |  
+| email  | String  |   The email of the owner. |   
+| password |string   |	The password of the owner.   |   
+
+## Response
 ```json
-json
-{
-    "id": 10,
-    "username": "alanpartridge",
-    "email": "alan@alan.com",
-    "password_hash": "$2a$10$uhUIUmVWVnrBWx9rrDWhS.CPCWCZsyqqa8./whhfzBZydX7yvahHS",
-    "password_salt": "$2a$10$uhUIUmVWVnrBWx9rrDWhS.",
-    "created_at": "2015-02-14T20:45:26.433Z",
-    "updated_at": "2015-02-14T20:45:26.540Z"
+
+   {
+    "status": 201,
+    "message": "Owner created successfully",
+    "newOwner": {
+        "id": 3,
+        "name": " Cali xuseen",
+        "email": "cali@gmail.com",
+        "password": "$2b$10$cDgoUnlr69fxWhqYM1uCqeAnY.xOSveB4ZLpBONai9sn8Wo6Iws5G",
+        "created": "2023-10-07T05:35:40.828Z",
+        "updated": "2023-10-07T05:35:40.828Z"
+    }
 }
+
 ```
-↓ Blank line!
+
+<!-- owner login-->
+## Owner Login
+
+<ul>
+<li>
+Url:api/owners/login
+</li>
+<li>
+method:Post
+</li>
+<li>
+Description:Authenticates a user
+</li>
+<li>
+Request Body:
+</li>
+</ul>
+
+
+
+
+|**Field**   |**Type**   | Description   |   
+|---|---|---|
+|  email | String  |  The email address of the owner. |  
+| password  | String  |   The password of the owner. |   
+   
+
+## Response
+```json
+
+ {
+    "status": 200,
+    "message": "Owner logged in successfully",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJjYWxpQGdtYWlsLmNvbSIsImlhdCI6MTY5NjY1NzM4NywiZXhwIjoxNjk2NjYwOTg3fQ.pjPApdmcw_qz0xgIDiVVXKElshEsRupEtuoyCBuEph8"
+}
+
+```
