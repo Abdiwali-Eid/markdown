@@ -14,8 +14,8 @@ The Bookstore API is a RESTful API that allows you to manage your bookstore. It 
 4. Owner registration: This endpoint allows bookstore owners to register for an account.
 5. User authentication with JWT: This endpoint allows users to authenticate and obtain a JWT token, which can be used to authenticate subsequent requests to the API. -->
 
-# Authentication
-___ 
+## Authentication
+---
 
 All requests to this API must be authenticated with a JWT token. You can obtain a JWT token by authenticating to the /login endpoint. The request body must contain the following fields:
 <ul>
