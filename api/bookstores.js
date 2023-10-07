@@ -107,10 +107,10 @@ router.delete('/:id', authenticate, async (req, res) => {
         });
 
         if(!deleteBookStore) {
-            return res.status(400).json({status: 400, message: "BookStore was not created!"})
+            return res.status(400).json({status: 400, message: "BookStore was not created"})
         }
 
-        res.status(200).json({status: 200, message: `BookStore ${id} successfully deleted!`})
+        res.status(200).json({status: 200, message: `BookStore ${id} successfully deleted`})
 
     } catch (error) {
         res.status(500).json({status: 500, message: error.message})

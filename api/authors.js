@@ -84,7 +84,7 @@ router.put('/:id', authenticate, async (req, res) => {
             return res.status(400).json({status: 400, message: "Author was not updated!"})
         }
 
-        res.status(200).json({status: 200, message: "Author updated successFully "})
+        res.status(200).json({status: 200, message: "Author updated successfully "})
 
     } catch (error) {
         res.status(500).json({status: 500, message: error.message})

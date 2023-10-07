@@ -111,3 +111,330 @@ Request Body:
 }
 
 ```
+
+
+
+<!-- Bookstore Endpoints-->
+# Bookstore Endpoints
+## create bookstore
+<ul>
+<li>
+Url:api/bookstore/
+</li>
+<li>
+method:Post
+</li>
+<li>
+Description:creates a bookstore
+</li>
+<li>
+Request Body:
+</li>
+</ul>
+
+
+
+
+|**Field**   |**Type**   | Description   |   
+|---|---|---|
+| ownerId | int  |  The ID of the owner. |  
+| name  | String  |   The name of the bookstore. |  
+| location  | String  |   The location of the bookstore. | 
+ 
+   
+
+## Response
+```json
+
+{
+    "status": 200,
+    "message": "BookStore created"
+}
+
+```
+## update bookstore
+<ul>
+<li>
+Url:api/bookstore/:id
+</li>
+<li>
+method:put
+</li>
+<li>
+Description:update a bookstore
+</li>
+<li>
+Request Body:
+</li>
+</ul>
+
+
+
+
+|**Field**   |**Type**   | Description   |   
+|---|---|---|
+| ownerId | int  |  The ID of the owner. |  
+| name  | String  |   The name of the bookstore. |  
+| location  | String  |   The location of the bookstore. | 
+ 
+   
+
+## Response
+```json
+
+{
+    "status": 200,
+    "message": "BookStore updated"
+}
+
+```
+<!--  -->
+## delete bookstore
+<ul>
+<li>
+URL:api/bookstore/:id
+</li>
+<li>
+method:delete
+</li>
+<li>
+Description:delete a bookstore
+</li>
+<li>
+Request Body:
+</li>
+</ul>
+
+
+|**Field**   |**Type**   | Description   |   
+|---|---|---|
+| id | number  |  The ID of the bookstore. |  
+
+ 
+   
+
+## Response
+```json
+
+{
+    "status": 200,
+    "message": "BookStore successfully deleted"
+}
+
+```
+
+## create books
+<ul>
+<li>
+URL:api/books/
+</li>
+<li>
+method:post
+</li>
+<li>
+Description:create a book
+</li>
+<li>
+Request Body:
+</li>
+</ul>
+
+
+|**Field**   |**Type**   | Description   |   
+|---|---|---|
+| authorId | number  |  The ID of the author. |  
+| bookstoreId | number  |  The ID of the bookstore. |  
+| title | string  |  The title of the book. |  
+| price | int  |  The price of the book. |
+| image | string  |  The image of the book. |
+
+ 
+   
+
+## Response
+```json
+
+{
+    "status": 200,
+    "message": "Book was created successfully"
+}
+
+```
+
+## update books
+<ul>
+<li>
+URL:api/books/:id
+</li>
+<li>
+method:put
+</li>
+<li>
+Description:update a book
+</li>
+<li>
+Request Body:
+</li>
+</ul>
+
+
+|**Field**   |**Type**   | Description   |   
+|---|---|---|
+| authorId | number  |  The ID of the author. |  
+| bookstoreId | number  |  The ID of the bookstore. |  
+| title | string  |  The title of the book. |  
+| price | int  |  The price of the book. |
+| image | string  |  The image of the book. |
+
+ 
+   
+
+## Response
+```json
+
+{
+    "status": 200,
+    "message": "Book was updated successfully"
+}
+
+```
+
+## delete books
+<ul>
+<li>
+URL:api/books/:id
+</li>
+<li>
+method:delete
+</li>
+<li>
+Description:delete a book
+</li>
+<li>
+Request Body:
+</li>
+</ul>
+
+
+|**Field**   |**Type**   | Description   |   
+|---|---|---|
+| id | number  |  The ID of the book. |  
+
+
+ 
+   
+
+## Response
+```json
+
+{
+    "status": 200,
+    "message": "Book successfully deleted"
+}
+
+```
+
+## create author
+<ul>
+<li>
+URL:api/authors/
+</li>
+<li>
+method:post
+</li>
+<li>
+Description:create Author
+</li>
+<li>
+Request Body:
+</li>
+</ul>
+
+
+|**Field**   |**Type**   | Description   |   
+|---|---|---|
+| name | string  |  The name of the author. |  
+
+
+ 
+   
+
+## Response
+```json
+
+{
+    "status": 200,
+    "message": "Author created"
+}
+
+```
+
+## update author
+<ul>
+<li>
+URL:api/authors/:id
+</li>
+<li>
+method:put
+</li>
+<li>
+Description:update Author
+</li>
+<li>
+Request Body:
+</li>
+</ul>
+
+
+|**Field**   |**Type**   | Description   |   
+|---|---|---|
+| name | string  |  The name of the author. |  
+
+
+ 
+   
+
+## Response
+```json
+
+{
+    "status": 200,
+    "message": "Author updated successfully"
+}
+
+```
+
+## delete author
+<ul>
+<li>
+URL:api/authors/:id
+</li>
+<li>
+method:delete
+</li>
+<li>
+Description:delete Author
+</li>
+<li>
+Request Body:
+</li>
+</ul>
+
+
+|**Field**   |**Type**   | Description   |   
+|---|---|---|
+| id | int  |  The id of the author. |  
+
+
+ 
+   
+
+## Response
+```json
+
+{
+    "status": 200,
+    "message": "Author deleted successfully"
+}
+
+```
